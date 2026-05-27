@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html class="dark" data-theme="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gourmet AI Main Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: ["class", '[data-theme="dark"]'],
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#002113",
+                      "on-primary-container": "#00422b",
+                      "outline-variant": "#3c4a42",
+                      "on-primary-fixed-variant": "#005236",
+                      "background": "#0f131d",
+                      "tertiary-fixed": "#d4e3ff",
+                      "primary-fixed": "#6ffbbe",
+                      "tertiary-container": "#60a5fa",
+                      "on-primary": "#003824",
+                      "on-tertiary-fixed-variant": "#004883",
+                      "surface-tint": "#4edea3",
+                      "on-tertiary-fixed": "#001c39",
+                      "primary-fixed-dim": "#4edea3",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "inverse-primary": "#006c49",
+                      "on-background": "#dfe2f1",
+                      "on-secondary-fixed": "#40000d",
+                      "surface": "#0f131d",
+                      "surface-dim": "#0f131d",
+                      "surface-container-highest": "#313540",
+                      "surface-container": "#1c1f2a",
+                      "primary-container": "#10b981",
+                      "on-secondary-container": "#ffc2c4",
+                      "secondary-fixed": "#ffdadb",
+                      "on-secondary": "#67001b",
+                      "surface-container-low": "#171b26",
+                      "tertiary": "#a4c9ff",
+                      "tertiary-fixed-dim": "#a4c9ff",
+                      "on-surface-variant": "#bbcabf",
+                      "inverse-on-surface": "#2c303b",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#003a6b",
+                      "on-secondary-fixed-variant": "#92002a",
+                      "surface-container-high": "#262a35",
+                      "inverse-surface": "#dfe2f1",
+                      "surface-container-lowest": "#0a0e18",
+                      "primary": "#4edea3",
+                      "on-error-container": "#ffdad6",
+                      "secondary": "#ffb2b7",
+                      "secondary-fixed-dim": "#ffb2b7",
+                      "surface-variant": "#313540",
+                      "surface-bright": "#353944",
+                      "on-surface": "#dfe2f1",
+                      "on-tertiary": "#00315d",
+                      "secondary-container": "#b50036",
+                      "outline": "#86948a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "sidebar-width": "280px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "unit": "4px",
+                      "container-padding": "32px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "headline-card": ["Plus Jakarta Sans"],
+                      "label-caps": ["Plus Jakarta Sans"],
+                      "display-hero": ["Plus Jakarta Sans"],
+                      "status-telemetry": ["Inter"],
+                      "body-main": ["Plus Jakarta Sans"],
+                      "display-hero-mobile": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-card": ["20px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-hero": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "status-telemetry": ["11px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-main": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "display-hero-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: var(--bg-color, #0f131d);
+            overflow-x: hidden;
+            transition: background-color 0.3s ease;
+        }
+        
+        [data-theme='light'] body {
+            --bg-color: #f8fafc;
+        }
+
+        .bg-radial-gradients {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(78, 222, 163, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(255, 178, 183, 0.05) 0%, transparent 40%);
+        }
+
+        [data-theme='light'] .bg-radial-gradients {
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(244, 63, 94, 0.1) 0%, transparent 40%);
+        }
+
+        .glass-panel {
+            background: rgba(15, 19, 29, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        [data-theme='light'] .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-card {
+            background: rgba(31, 35, 42, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.08);
+            border-right: 1px solid rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+        }
+
+        [data-theme='light'] .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.5);
+        }
+        
+        [data-theme='light'] .glass-card:hover {
+             border-top: 1px solid rgba(0, 0, 0, 0.1);
+             box-shadow: 0 15px 35px -10px rgba(0,0,0,0.1);
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 2px;
+            width: 100%;
+            background: transparent;
+            transition: background 0.3s ease;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+
+        .glass-card:hover::before {
+            background: linear-gradient(90deg, #4edea3, #ffb2b7);
+        }
+        
+        .glass-card.is-compared {
+            border: 1px solid #4edea3;
+            box-shadow: 0 0 20px rgba(78, 222, 163, 0.2);
+        }
+
+        .ghost-input {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            color: #dfe2f1;
+            transition: all 0.2s ease;
+        }
+
+        [data-theme='light'] .ghost-input {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: #1e293b;
+        }
+
+        .ghost-input:focus {
+            border-color: #4edea3;
+            box-shadow: 0 0 10px rgba(78, 222, 163, 0.2);
+            outline: none;
+        }
+
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #4edea3;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(78, 222, 163, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(78, 222, 163, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(78, 222, 163, 0); }
+        }
+
+        .comparison-bar-enter {
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .comparison-bar-exit {
+            animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(100px); opacity: 0; }
+        }
+
+        .confidence-ring {
+            transition: stroke-dasharray 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+<style>@keyframes breathe { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }</style></head>
+<body class="text-on-surface font-body-main antialiased min-h-screen flex">
+<div class="bg-radial-gradients"></div>
+<!-- SideNavBar (JSON) -->
+<nav class="glass-panel fixed left-0 top-0 h-full w-[320px] border-r border-white/10 shadow-2xl flex flex-col py-gutter z-50 hidden md:flex dark:border-white/10 border-black/5 dark:bg-surface/80 bg-white/80 overflow-y-auto">
+<!-- Logo Row -->
+<div class="px-6 mb-8 flex items-center justify-between shrink-0">
+<div>
+<h1 class="font-display-hero text-display-hero-mobile text-primary tracking-tighter">Gourmet AI</h1>
+<p class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant text-slate-500 mt-1">Digital Sommelier</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors dark:text-on-surface-variant text-slate-500" id="theme-toggle">
+<span class="material-symbols-outlined theme-icon-light hidden" style="font-variation-settings: 'FILL' 0;">light_mode</span>
+<span class="material-symbols-outlined theme-icon-dark" style="font-variation-settings: 'FILL' 0;">dark_mode</span>
+</button>
+</div>
+<!-- Search Criteria (Moved to top) -->
+<div class="px-6 flex-1">
+<h3 class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant text-slate-500 mb-4">Search Criteria</h3>
+<div class="space-y-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant dark:text-on-surface-variant text-slate-400 text-sm">location_on</span>
+<select class="ghost-input w-full rounded-lg py-2 pl-9 pr-4 text-sm font-body-main appearance-none">
+<option value="delhi">Delhi</option>
+</select>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant dark:text-on-surface-variant text-slate-400 text-sm">restaurant</span>
+<select class="ghost-input w-full rounded-lg py-2 pl-9 pr-4 text-sm font-body-main appearance-none">
+<option value="italian">Italian</option>
+</select>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant dark:text-on-surface-variant text-slate-400 text-sm">payments</span>
+<select class="ghost-input w-full rounded-lg py-2 pl-9 pr-4 text-sm font-body-main appearance-none">
+<option value="medium">Medium Budget</option>
+</select>
+</div>
+<div>
+<label class="flex justify-between text-xs text-on-surface-variant dark:text-on-surface-variant text-slate-500 mb-2">
+<span class="">Min Rating</span>
+<span class="text-primary font-bold">4.2</span>
+</label>
+<input class="w-full accent-primary h-1 bg-surface-variant dark:bg-surface-variant bg-slate-200 rounded-full appearance-none" max="5" min="1" step="0.1" type="range" value="4.2"/>
+</div>
+<div>
+<label class="block text-[10px] font-label-caps uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant text-slate-500 mb-2 ml-1">Qualitative Preferences</label><textarea class="ghost-input w-full rounded-lg p-3 text-sm font-body-main h-24 resize-none" placeholder="Qualitative Preferences (e.g. quiet corner table, good for anniversaries...)"></textarea>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-caps text-label-caps uppercase tracking-widest py-3 rounded-lg hover:shadow-[0_0_15px_rgba(78,222,163,0.4)] transition-all">
+                    Search Restaurants
+                </button>
+</div>
+</div>
+<!-- Agent Pipeline Panel -->
+<div class="px-6 mt-8 pb-6 shrink-0 border-t border-black/10 dark:border-white/10 pt-6">
+<h3 class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant text-slate-500 mb-4">Agent Pipeline</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400">
+<div class="pulse-dot" style="width: 7px; height: 7px; border-radius: 50%; background-color: rgb(16, 185, 129); box-shadow: rgb(16, 185, 129) 0px 0px 6px; animation: 3s ease-in-out 0s infinite normal none running breathe;"></div>
+<span class="">Ranker — SemanticRanker</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400">
+<div class="pulse-dot" style="width: 7px; height: 7px; border-radius: 50%; background-color: rgb(16, 185, 129); box-shadow: rgb(16, 185, 129) 0px 0px 6px; animation: 3s ease-in-out 0s infinite normal none running breathe;"></div>
+<span class="">Critic — ValidationCritic</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400">
+<div class="pulse-dot" style="width: 7px; height: 7px; border-radius: 50%; background-color: rgb(16, 185, 129); box-shadow: rgb(16, 185, 129) 0px 0px 6px; animation: 3s ease-in-out 0s infinite normal none running breathe;"></div>
+<span class="">Synth — SynthesisTrustAgent</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-[320px] flex flex-col min-h-screen relative">
+<!-- TopAppBar (JSON) -->
+<header class="bg-transparent full-width top-0 flex justify-between items-center px-container-padding py-stack-lg z-40">
+<div>
+<h2 class="font-display-hero text-display-hero text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">Gourmet AI Recommender</h2>
+<p class="text-on-surface-variant dark:text-on-surface-variant text-slate-500 font-status-telemetry tracking-widest uppercase mt-2 opacity-80">Powered by a 3-Agent AI Pipeline</p>
+</div>
+</header>
+<div class="px-container-padding flex-1 flex flex-col gap-6 pb-12">
+<!-- System Status Bar -->
+<div class="glass-panel rounded-lg p-3 flex items-center gap-6 text-status-telemetry font-status-telemetry uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant text-slate-500 fade-in-up" style="animation-delay: 0.1s;">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">bolt</span>
+<span class="text-on-surface dark:text-on-surface text-slate-800">8 candidates filtered</span>
+</div>
+<div class="h-3 w-px bg-black/10 dark:bg-white/10"></div>
+<div class="flex items-center gap-2">
+<span class="">Source:</span>
+<span class="bg-primary/20 text-primary px-2 py-0.5 rounded border border-primary/30 flex items-center gap-1">🟢 Live Pipeline</span>
+</div>
+<div class="h-3 w-px bg-black/10 dark:bg-white/10"></div>
+<div class="flex items-center gap-2">
+<span class="">RQS:</span>
+<span class=""><span class="text-[#F59E0B]">★★★★☆</span> (4/5)</span>
+</div>
+<div class="h-3 w-px bg-black/10 dark:bg-white/10"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-amber-500">2.1s</span>
+</div>
+<div class="h-3 w-px bg-black/10 dark:bg-white/10"></div>
+<div class="flex items-center gap-2 ml-auto"><span class="">Sort:</span><div class="bg-white/5 dark:bg-white/5 border border-white/10 rounded-full px-3 py-1 flex items-center gap-1.5 cursor-pointer hover:bg-white/10 transition-colors"><span class="text-primary">AI RECOMMENDED RANK</span><span class="material-symbols-outlined text-sm text-primary">expand_more</span></div></div>
+</div>
+<!-- Alert Banner -->
+<div class="bg-surface-container-high dark:bg-surface-container-high bg-orange-50 border-l-4 border-error/70 rounded-r-lg p-4 flex items-start gap-3 fade-in-up" style="animation-delay: 0.2s;">
+<span class="material-symbols-outlined text-error mt-0.5">warning</span>
+<p class="font-body-main text-on-surface dark:text-on-surface text-slate-800 text-sm">No exact matches found. We expanded the budget and rating requirements to find these options.</p>
+</div>
+<!-- Restaurant List (Single Column) -->
+<div class="flex flex-col gap-6 mt-4" id="restaurant-container">
+<!-- Card 1 (Toit) -->
+<div class="glass-card rounded-xl p-6 flex flex-col gap-4 fade-in-up restaurant-card" data-id="1" style="animation-delay: 0.3s;">
+<div class="flex justify-between items-start relative w-full">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-[#F59E0B] flex items-center justify-center text-white font-bold text-sm shadow-lg">
+    1
+</div>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-headline-card text-headline-card text-on-surface dark:text-on-surface text-slate-900">Toit</h3>
+</div>
+<p class="text-on-surface-variant dark:text-on-surface-variant text-slate-500 text-sm mt-1">📍 Delhi • 💰 ₹1,500 for two</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-[10px] font-label-caps uppercase tracking-wider text-white transition-all shadow-lg"><span class="material-symbols-outlined text-xs">check</span><span class="">Comparing</span></button>
+<!-- AI Confidence Ring -->
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant dark:text-surface-variant text-slate-200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-[#10b981] confidence-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" data-target="80" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-width="3"></path>
+</svg>
+<span class="absolute text-xs font-bold text-[#10b981]">80%</span>
+</div>
+</div>
+</div>
+<!-- Badges -->
+<div class="flex flex-wrap gap-2 ml-12">
+<span class="bg-black/5 dark:bg-white/5 text-on-surface dark:text-on-surface text-slate-800 text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10 flex items-center gap-1">★ 4.8</span>
+<span class="bg-[#F59E0B]/10 text-[#F59E0B] text-xs px-2 py-1 rounded-md border border-[#F59E0B]/20">Medium Budget</span>
+<span class="bg-black/5 dark:bg-white/5 text-on-surface-variant text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10">Italian</span>
+<span class="bg-violet-500/10 text-violet-400 text-xs px-2 py-1 rounded-md border border-violet-500/20">Romantic</span>
+<span class="bg-violet-500/10 text-violet-400 text-xs px-2 py-1 rounded-md border border-violet-500/20">Great Pasta</span>
+</div>
+<!-- AI Justification Box -->
+<div class="bg-surface-container/50 dark:bg-surface-container/50 bg-slate-50 border-l-2 border-primary p-3 rounded-r-lg mt-2 ml-12">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest text-primary">AI Ranker Justification</span>
+</div>
+<p class="text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-600 italic">"Toit's lively brewery ambiance and wide Continental selection make it a perfect fit for a relaxed evening with friends."</p>
+</div>
+<!-- Footer Actions -->
+<div class="flex justify-between items-center mt-2 pt-4 border-t border-black/5 dark:border-white/5 ml-12">
+<div class="flex gap-2">
+<button class="feedback-btn flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400 hover:text-primary hover:border-primary/50 transition-all" data-type="up">
+<span class="">👍 Good match</span>
+</button>
+<button class="feedback-btn flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400 hover:text-secondary hover:border-secondary/50 transition-all" data-type="down">
+<span class="">👎 Not for me</span>
+</button>
+<span class="feedback-status text-xs text-primary hidden items-center ml-2">✓ Feedback saved to session memory</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant dark:text-on-surface-variant text-slate-400">
+                            Session Memory Active <div class="pulse-dot" style="width: 7px; height: 7px; border-radius: 50%; background-color: rgb(16, 185, 129); box-shadow: rgb(16, 185, 129) 0px 0px 6px; animation: 3s ease-in-out 0s infinite normal none running breathe;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-xl p-6 flex flex-col gap-4 fade-in-up restaurant-card" data-id="2" style="animation-delay: 0.4s;">
+<div class="flex justify-between items-start relative w-full">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-[#94A3B8] flex items-center justify-center text-white font-bold text-sm shadow-lg">
+    2
+</div>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-headline-card text-headline-card text-on-surface dark:text-on-surface text-slate-900">Artusi Ristorante</h3>
+</div>
+<p class="text-on-surface-variant dark:text-on-surface-variant text-slate-500 text-sm mt-1">📍 GK2, Delhi • 💰 ₹3,000 for two</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-[10px] font-label-caps uppercase tracking-wider text-white transition-all shadow-lg"><span class="material-symbols-outlined text-xs">check</span><span class="">Comparing</span></button>
+<!-- AI Confidence Ring -->
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant dark:text-surface-variant text-slate-200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-[#f59e0b] confidence-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" data-target="65" fill="none" stroke="currentColor" stroke-dasharray="65, 100" stroke-width="3"></path>
+</svg>
+<span class="absolute text-xs font-bold text-[#f59e0b]">65%</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 ml-12">
+<span class="bg-black/5 dark:bg-white/5 text-on-surface dark:text-on-surface text-slate-800 text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10 flex items-center gap-1">★ 4.6</span>
+<span class="bg-rose-500/10 text-rose-400 text-xs px-2 py-1 rounded-md border border-rose-500/20">High Budget</span>
+<span class="bg-black/5 dark:bg-white/5 text-on-surface-variant text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10">Italian</span>
+<span class="bg-violet-500/10 text-violet-400 text-xs px-2 py-1 rounded-md border border-violet-500/20">Authentic Italian</span>
+<span class="bg-violet-500/10 text-violet-400 text-xs px-2 py-1 rounded-md border border-violet-500/20">Fine Dining</span>
+</div>
+<div class="bg-surface-container/50 dark:bg-surface-container/50 bg-slate-50 border-l-2 border-tertiary p-3 rounded-r-lg mt-2 ml-12"><div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">psychology</span><span class="font-label-caps text-[10px] uppercase tracking-widest text-primary">AI Ranker Justification</span></div>
+<p class="text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-600 italic">"Exceeds budget, but provides the most authentic Italian experience in the area if you are willing to splurge."</p>
+</div>
+<div class="flex justify-between items-center mt-2 pt-4 border-t border-black/5 dark:border-white/5 ml-12">
+<div class="flex gap-2">
+<button class="feedback-btn flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400 hover:text-primary hover:border-primary/50 transition-all" data-type="up">
+<span class="">👍 Good match</span>
+</button>
+<button class="feedback-btn flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 text-sm text-on-surface-variant dark:text-on-surface-variant text-slate-400 hover:text-secondary hover:border-secondary/50 transition-all" data-type="down">
+<span class="">👎 Not for me</span>
+</button>
+<span class="feedback-status text-xs text-primary hidden items-center ml-2">✓ Feedback saved to session memory</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant dark:text-on-surface-variant text-slate-400">
+                            Session Memory Active <div class="pulse-dot" style="width: 7px; height: 7px; border-radius: 50%; background-color: rgb(16, 185, 129); box-shadow: rgb(16, 185, 129) 0px 0px 6px; animation: 3s ease-in-out 0s infinite normal none running breathe;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden initially) -->
+<div class="hidden flex-col items-center justify-center flex-1 py-20 text-center fade-in-up" id="empty-state">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">restaurant</span>
+</div>
+<h3 class="font-display-hero-mobile text-2xl text-on-surface mb-2">Ready to Discover</h3>
+<p class="text-on-surface-variant max-w-md">Adjust your search criteria on the left and our AI agent pipeline will curate the perfect dining options for you.</p>
+</div>
+</div>
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 glass-panel rounded-full px-6 py-3 flex items-center gap-6 z-50 shadow-[0_10px_40px_rgba(0,0,0,0.6)] border-t border-white/10 min-w-[400px] justify-between"><div class="flex items-center gap-3"><span class="text-xl">🆚</span><span class="text-on-surface font-body-main text-sm font-semibold">2 restaurants selected</span></div><div class="h-6 w-px bg-white/10"></div><button class="bg-gradient-to-r from-rose-500 to-red-600 text-white font-label-caps text-xs uppercase tracking-widest px-6 py-2 rounded-full hover:scale-105 transition-transform flex items-center gap-2">Compare Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></main>
+<!-- Floating Comparison Bar -->
+<div class="fixed bottom-16 right-8 glass-panel rounded-full px-6 py-3 flex items-center gap-4 z-50 shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-t border-black/10 dark:border-white/20 cursor-pointer hover:bg-surface-container-high dark:hover:bg-surface-container-high hover:bg-slate-50 transition-colors hidden opacity-0 translate-y-20" id="comparison-bar">
+<span class="text-on-surface dark:text-on-surface text-slate-800 font-body-main text-sm"><span class="" id="compare-count">0</span> restaurants selected</span>
+<div class="h-4 w-px bg-black/20 dark:bg-white/20"></div>
+<button class="text-primary font-label-caps text-label-caps uppercase tracking-widest flex items-center gap-1" id="compare-now-btn">
+<span class="btn-text">Compare Now</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Comparison Loading Modal -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center" id="comparison-modal">
+<div class="glass-panel p-8 rounded-2xl flex flex-col items-center gap-4">
+<div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+<p class="text-primary font-label-caps uppercase tracking-widest text-sm">Generating Comparison...</p>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const iconLight = document.querySelector('.theme-icon-light');
+        const iconDark = document.querySelector('.theme-icon-dark');
+        const htmlDoc = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlDoc.getAttribute('data-theme') === 'dark') {
+                htmlDoc.setAttribute('data-theme', 'light');
+                htmlDoc.classList.remove('dark');
+                iconDark.classList.add('hidden');
+                iconLight.classList.remove('hidden');
+            } else {
+                htmlDoc.setAttribute('data-theme', 'dark');
+                htmlDoc.classList.add('dark');
+                iconLight.classList.add('hidden');
+                iconDark.classList.remove('hidden');
+            }
+        });
+
+        // Animate Confidence Rings
+        setTimeout(() => {
+            document.querySelectorAll('.confidence-ring').forEach(ring => {
+                const target = ring.getAttribute('data-target');
+                ring.setAttribute('stroke-dasharray', `${target}, 100`);
+            });
+        }, 300);
+
+        // Comparison Logic
+        const compareCheckboxes = document.querySelectorAll('.compare-checkbox');
+        const comparisonBar = document.getElementById('comparison-bar');
+        const compareCountSpan = document.getElementById('compare-count');
+        let selectedCount = 0;
+
+        compareCheckboxes.forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const card = e.target.closest('.glass-card');
+                if (e.target.checked) {
+                    card.classList.add('is-compared');
+                    selectedCount++;
+                } else {
+                    card.classList.remove('is-compared');
+                    selectedCount--;
+                }
+
+                compareCountSpan.textContent = selectedCount;
+
+                if (selectedCount >= 2) {
+                    comparisonBar.classList.remove('hidden');
+                    comparisonBar.classList.remove('comparison-bar-exit');
+                    comparisonBar.classList.add('comparison-bar-enter');
+                } else {
+                    if(!comparisonBar.classList.contains('hidden')){
+                        comparisonBar.classList.remove('comparison-bar-enter');
+                        comparisonBar.classList.add('comparison-bar-exit');
+                        setTimeout(() => {
+                            if(selectedCount < 2) comparisonBar.classList.add('hidden');
+                        }, 400);
+                    }
+                }
+            });
+        });
+
+        // Compare Now Button
+        const compareNowBtn = document.getElementById('compare-now-btn');
+        const comparisonModal = document.getElementById('comparison-modal');
+        
+        compareNowBtn.addEventListener('click', () => {
+            comparisonModal.classList.remove('hidden');
+            setTimeout(() => {
+                comparisonModal.classList.add('hidden');
+                // Normally navigate to comparison view here
+            }, 1500);
+        });
+
+        // Feedback Buttons
+        const feedbackBtns = document.querySelectorAll('.feedback-btn');
+
+        feedbackBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = btn.closest('.glass-card');
+                const siblings = card.querySelectorAll('.feedback-btn');
+                const status = card.querySelector('.feedback-status');
+                
+                siblings.forEach(s => {
+                    s.classList.remove('text-primary', 'text-secondary', 'border-primary', 'border-secondary', 'bg-primary/10', 'bg-secondary/10');
+                    s.style.opacity = '0.5';
+                });
+
+                btn.style.opacity = '1';
+                
+                if(btn.dataset.type === 'up') {
+                    btn.classList.add('text-primary', 'border-primary', 'bg-primary/10');
+                } else {
+                    btn.classList.add('text-secondary', 'border-secondary', 'bg-secondary/10');
+                }
+
+                status.classList.remove('hidden');
+                status.classList.add('flex');
+                setTimeout(() => {
+                    status.classList.add('hidden');
+                    status.classList.remove('flex');
+                }, 3000);
+            });
+        });
+    });
+</script>
+</body></html>

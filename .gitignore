@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/data/*.parquet
+
+# OS
+.DS_Store
+
+# User Uploads / Downloads
+*.zip
+stitch_dark_mode/
+stitch_light_mode/
+
+# Environment Variables
+.env

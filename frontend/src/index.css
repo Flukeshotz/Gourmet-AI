@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ===== DARK MODE TOKENS ===== */
+  /* NOTE: Only [data-theme='dark'] — NOT :root — so light mode variables always win */
+  [data-theme='dark'] {
+    --color-background: 15 19 29;
+    --color-surface: 15 19 29;
+    --color-surface-dim: 15 19 29;
+    --color-surface-bright: 53 57 68;
+    --color-surface-container-lowest: 10 14 24;
+    --color-surface-container-low: 23 27 38;
+    --color-surface-container: 28 31 42;
+    --color-surface-container-high: 38 42 53;
+    --color-surface-container-highest: 49 53 64;
+    --color-surface-variant: 49 53 64;
+    --color-surface-tint: 78 222 163;
+
+    --color-on-background: 223 226 241;
+    --color-on-surface: 223 226 241;
+    --color-on-surface-variant: 187 202 191;
+
+    --color-primary: 78 222 163;
+    --color-on-primary: 0 56 36;
+    --color-primary-container: 16 185 129;
+    --color-on-primary-container: 0 66 43;
+    --color-primary-fixed: 111 251 190;
+    --color-primary-fixed-dim: 78 222 163;
+    --color-on-primary-fixed: 0 33 19;
+    --color-on-primary-fixed-variant: 0 82 54;
+    --color-inverse-primary: 0 108 73;
+
+    --color-secondary: 255 178 183;
+    --color-on-secondary: 103 0 27;
+    --color-secondary-container: 181 0 54;
+    --color-on-secondary-container: 255 194 196;
+    --color-secondary-fixed: 255 218 219;
+    --color-secondary-fixed-dim: 255 178 183;
+    --color-on-secondary-fixed: 64 0 13;
+    --color-on-secondary-fixed-variant: 146 0 42;
+
+    --color-tertiary: 164 201 255;
+    --color-on-tertiary: 0 49 93;
+    --color-tertiary-container: 96 165 250;
+    --color-on-tertiary-container: 0 58 107;
+    --color-tertiary-fixed: 212 227 255;
+    --color-tertiary-fixed-dim: 164 201 255;
+    --color-on-tertiary-fixed: 0 28 57;
+    --color-on-tertiary-fixed-variant: 0 72 131;
+
+    --color-error: 255 180 171;
+    --color-on-error: 105 0 5;
+    --color-error-container: 147 0 10;
+    --color-on-error-container: 255 218 214;
+
+    --color-outline: 134 148 138;
+    --color-outline-variant: 60 74 66;
+    --color-inverse-surface: 223 226 241;
+    --color-inverse-on-surface: 44 48 59;
+
+    /* Glass surfaces use raw rgba so they don't change with tokens */
+    --glass-panel-bg: rgba(15, 19, 29, 0.6);
+    --glass-panel-border: rgba(255, 255, 255, 0.05);
+    --glass-card-bg: rgba(31, 35, 42, 0.5);
+    --glass-card-border-top: rgba(255, 255, 255, 0.15);
+    --glass-card-border: rgba(255, 255, 255, 0.06);
+    --justification-bg: rgba(28, 31, 42, 0.9);
+    --justification-border: 78 222 163;
+    --ghost-input-border: rgba(255, 255, 255, 0.1);
+    --ghost-input-color: #dfe2f1;
+  }
+
+  /* ===== LIGHT MODE TOKENS ===== */
+  [data-theme='light'] {
+    --color-background: 249 249 255;
+    --color-surface: 249 249 255;
+    --color-surface-dim: 211 218 234;
+    --color-surface-bright: 249 249 255;
+    --color-surface-container-lowest: 255 255 255;
+    --color-surface-container-low: 240 243 255;
+    --color-surface-container: 231 238 254;
+    --color-surface-container-high: 226 232 248;
+    --color-surface-container-highest: 220 226 243;
+    --color-surface-variant: 220 226 243;
+    --color-surface-tint: 0 108 73;
+
+    /* Darkest possible text for maximum contrast on white */
+    --color-on-background: 5 8 12;
+    --color-on-surface: 5 8 12;
+    --color-on-surface-variant: 20 30 25;
+
+    --color-primary: 0 108 73;
+    --color-on-primary: 255 255 255;
+    --color-primary-container: 16 185 129;
+    --color-on-primary-container: 0 66 43;
+    --color-primary-fixed: 111 251 190;
+    --color-primary-fixed-dim: 78 222 163;
+    --color-on-primary-fixed: 0 33 19;
+    --color-on-primary-fixed-variant: 0 82 54;
+    --color-inverse-primary: 78 222 163;
+
+    --color-secondary: 87 94 112;
+    --color-on-secondary: 255 255 255;
+    --color-secondary-container: 217 223 245;
+    --color-on-secondary-container: 15 20 35;
+    --color-secondary-fixed: 220 226 247;
+    --color-secondary-fixed-dim: 192 198 219;
+    --color-on-secondary-fixed: 20 27 43;
+    --color-on-secondary-fixed-variant: 64 71 88;
+
+    --color-tertiary: 164 58 58;
+    --color-on-tertiary: 255 255 255;
+    --color-tertiary-container: 252 124 120;
+    --color-on-tertiary-container: 113 20 25;
+    --color-tertiary-fixed: 255 218 215;
+    --color-tertiary-fixed-dim: 255 179 175;
+    --color-on-tertiary-fixed: 65 0 5;
+    --color-on-tertiary-fixed-variant: 132 34 37;
+
+    --color-error: 186 26 26;
+    --color-on-error: 255 255 255;
+    --color-error-container: 255 218 214;
+    --color-on-error-container: 147 0 10;
+
+    --color-outline: 80 95 85;
+    --color-outline-variant: 150 168 158;
+    --color-inverse-surface: 42 49 61;
+    --color-inverse-on-surface: 235 241 255;
+
+    /* Glass surfaces in light mode */
+    --glass-panel-bg: rgba(255, 255, 255, 0.92);
+    --glass-panel-border: rgba(0, 0, 0, 0.08);
+    --glass-card-bg: rgba(255, 255, 255, 0.95);
+    --glass-card-border-top: rgba(0, 0, 0, 0.08);
+    --glass-card-border: rgba(0, 0, 0, 0.05);
+    --justification-bg: rgba(225, 234, 252, 0.95);
+    --justification-border: 0 108 73;
+    --ghost-input-border: rgba(0, 0, 0, 0.18);
+    --ghost-input-color: #05080c;
+  }
+
+  html, body {
+    background-color: rgb(var(--color-background));
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Explicit color inheritance for light mode — belt-and-suspenders */
+  [data-theme='light'] html,
+  [data-theme='light'] body {
+    color: #05080c;
+  }
+}
+
+@layer components {
+  .bg-radial-gradients {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(78, 222, 163, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(255, 178, 183, 0.05) 0%, transparent 40%);
+    transition: background 0.3s ease;
+  }
+
+  [data-theme='light'] .bg-radial-gradients {
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(244, 63, 94, 0.1) 0%, transparent 40%);
+  }
+
+  .glass-panel {
+    background: var(--glass-panel-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-panel-border);
+  }
+
+  .glass-card {
+    background: var(--glass-card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-card-border-top);
+    border-left: 1px solid var(--glass-card-border);
+    border-right: 1px solid var(--glass-card-border);
+    border-bottom: 1px solid var(--glass-card-border);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  [data-theme='light'] .glass-card:hover {
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: transparent;
+    transition: background 0.3s ease;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  .glass-card:hover::before {
+    background: linear-gradient(90deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+  }
+
+  .glass-card.is-compared {
+    border: 1px solid rgb(var(--color-primary));
+    box-shadow: 0 0 20px rgba(var(--color-primary), 0.2);
+  }
+
+  .ai-justification-box {
+    background: var(--justification-bg);
+    border-left: 2px solid rgb(var(--justification-border));
+  }
+
+  .ghost-input {
+    background: transparent;
+    border: 1px solid var(--ghost-input-border);
+    color: var(--ghost-input-color);
+    transition: all 0.2s ease;
+  }
+
+  .ghost-input:focus {
+    border-color: rgb(var(--color-primary));
+    box-shadow: 0 0 10px rgba(var(--color-primary), 0.2);
+    outline: none;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.3); border-radius: 3px; }
+
+.fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: breathe 3s infinite ease-in-out;
+}
+
+@keyframes breathe { 
+  0%, 100% { opacity: 0.6; } 
+  50% { opacity: 1; } 
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(78, 222, 163, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(78, 222, 163, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(78, 222, 163, 0); }
+}
+
+.comparison-bar-enter {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.comparison-bar-exit {
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateX(-50%) translateY(0); opacity: 1; }
+  to { transform: translateX(-50%) translateY(100px); opacity: 0; }
+}
+
+.confidence-ring {
+  transition: stroke-dasharray 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

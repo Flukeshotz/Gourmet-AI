@@ -1,0 +1,813 @@
+{
+  "eb1303d3e718af4b314dadf442a2b8c9ef3ba2a0005f3beb4b896fa4ee181e2b": [
+    {
+      "restaurant_name": "A",
+      "rank": 1,
+      "cuisine": "Italian",
+      "rating": 4.5,
+      "average_cost": 500.0,
+      "location": "delhi",
+      "estimated_cost_tier": "Low",
+      "justification": "This restaurant fits the user's guidelines as it serves Italian cuisine in Delhi, which matches the target cuisine and location. Although it's ranked as low budget, the high rating of 4.5 suggests it could still offer a pleasant atmosphere for an anniversary dinner.",
+      "highlighted_features": [
+        "Italian Cuisine",
+        "Highly Rated",
+        "Affordable"
+      ]
+    }
+  ],
+  "4cd83c3c4bb55252c3ec9c1c5407a1d130881b6dc34b0767074a278bce3678a4": [
+    {
+      "restaurant_name": "A",
+      "rank": 1,
+      "cuisine": "Italian",
+      "rating": 4.5,
+      "estimated_cost_tier": "Low",
+      "justification": "Because it matches the prompt",
+      "highlighted_features": [
+        "cozy"
+      ]
+    }
+  ],
+  "fa79e0efdaffb0746a9107f995d39ee7249cc5f59780f4a43c11bfc6e7ce1fe2": [
+    {
+      "restaurant_name": "A",
+      "rank": 1,
+      "cuisine": "Italian",
+      "rating": 4.5,
+      "estimated_cost_tier": "Low",
+      "justification": "Because it matches the prompt",
+      "highlighted_features": [
+        "cozy"
+      ]
+    }
+  ],
+  "4f580c7966d27642c2618dbe1e746fc25299adc612b6f2d56c82d4d6ae6430da": [
+    {
+      "restaurant_name": "Sai Jagannath Food and Chats Point",
+      "rank": 1,
+      "cuisine": "South Indian, Chinese",
+      "rating": 3.8,
+      "average_cost": 300.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Sai Jagannath Food and Chats Point has a high rating of 3.8 and offers a variety of cuisines, including South Indian and Chinese. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Parisar Veg Restaurant",
+      "rank": 2,
+      "cuisine": "Chinese, North Indian, South Indian",
+      "rating": 3.6,
+      "average_cost": 400.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Parisar Veg Restaurant has a good rating of 3.6 and offers a variety of cuisines, including Chinese, North Indian, and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Parisar Veg Restaurant",
+      "rank": 3,
+      "cuisine": "Chinese, North Indian, South Indian",
+      "rating": 3.6,
+      "average_cost": 400.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Parisar Veg Restaurant has a good rating of 3.6 and offers a variety of cuisines, including Chinese, North Indian, and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Parisar Veg Restaurant",
+      "rank": 4,
+      "cuisine": "Chinese, North Indian, South Indian",
+      "rating": 3.6,
+      "average_cost": 400.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Parisar Veg Restaurant has a good rating of 3.6 and offers a variety of cuisines, including Chinese, North Indian, and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Parisar Veg Restaurant",
+      "rank": 5,
+      "cuisine": "Chinese, North Indian, South Indian",
+      "rating": 3.6,
+      "average_cost": 400.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Parisar Veg Restaurant has a good rating of 3.6 and offers a variety of cuisines, including Chinese, North Indian, and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Parisar Veg Restaurant",
+      "rank": 6,
+      "cuisine": "Chinese, North Indian, South Indian",
+      "rating": 3.6,
+      "average_cost": 400.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Parisar Veg Restaurant has a good rating of 3.6 and offers a variety of cuisines, including Chinese, North Indian, and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Meal & Biryani",
+      "rank": 7,
+      "cuisine": "Andhra, South Indian",
+      "rating": 3.6,
+      "average_cost": 450.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Meal & Biryani has a good rating of 3.6 and offers a variety of cuisines, including Andhra and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Meal & Biryani",
+      "rank": 8,
+      "cuisine": "Andhra, South Indian",
+      "rating": 3.6,
+      "average_cost": 450.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Meal & Biryani has a good rating of 3.6 and offers a variety of cuisines, including Andhra and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Nila Cafe",
+      "rank": 9,
+      "cuisine": "Kerala, South Indian",
+      "rating": 3.6,
+      "average_cost": 400.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Nila Cafe has a good rating of 3.6 and offers a variety of cuisines, including Kerala and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Happy Days",
+      "rank": 10,
+      "cuisine": "Biryani, North Indian, South Indian",
+      "rating": 3.1,
+      "average_cost": 500.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Happy Days has a good rating of 3.1 and offers a variety of cuisines, including Biryani, North Indian, and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Night Fox",
+      "rank": 11,
+      "cuisine": "South Indian, North Indian, Chinese",
+      "rating": 3.2,
+      "average_cost": 500.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Night Fox has a good rating of 3.2 and offers a variety of cuisines, including South Indian, North Indian, and Chinese. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Vijayawada Style",
+      "rank": 12,
+      "cuisine": "North Indian, South Indian, Chinese",
+      "rating": 3.2,
+      "average_cost": 300.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Vijayawada Style has a good rating of 3.2 and offers a variety of cuisines, including North Indian, South Indian, and Chinese. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Meal & Biryani",
+      "rank": 13,
+      "cuisine": "Andhra, South Indian",
+      "rating": 3.6,
+      "average_cost": 450.0,
+      "location": "Bommanahalli",
+      "estimated_cost_tier": "Medium",
+      "justification": "Meal & Biryani has a good rating of 3.6 and offers a variety of cuisines, including Andhra and South Indian. This restaurant has received positive feedback, making it a great choice for those looking for good food.",
+      "highlighted_features": [
+        "Good rating",
+        "Variety of cuisines"
+      ]
+    }
+  ],
+  "727b4cb8b8390ac08d51a163d525b91a1a1c6cabb849b3c998edebfb6bc54986": [
+    {
+      "restaurant_name": "Onesta",
+      "rank": 1,
+      "cuisine": "Pizza, Cafe, Italian",
+      "rating": 4.6,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Onesta is a top-rated restaurant with a high rating of 4.6. It offers a variety of cuisines including pizza, cafe, and Italian, which aligns with the user's desire for good food. The average cost is also within the medium budget tier, making it an affordable option.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines",
+        "Affordable price"
+      ]
+    },
+    {
+      "restaurant_name": "Vinny's",
+      "rank": 2,
+      "cuisine": "Pizza, Italian, Continental, Desserts",
+      "rating": 4.2,
+      "average_cost": 800.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Vinny's is a well-rated restaurant with a rating of 4.2. Although it is slightly more expensive than Onesta, it offers a wide range of cuisines including pizza, Italian, and desserts. This variety of options makes it a good choice for those looking for good food.",
+      "highlighted_features": [
+        "Variety of cuisines",
+        "Good rating",
+        "Dessert options"
+      ]
+    },
+    {
+      "restaurant_name": "Szechuan Dragon",
+      "rank": 3,
+      "cuisine": "Chinese, Thai, Momos",
+      "rating": 4.2,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Szechuan Dragon is a well-rated restaurant with a rating of 4.2. It offers a unique blend of Chinese, Thai, and momos cuisines, which may appeal to those looking for something different. The average cost is also within the medium budget tier.",
+      "highlighted_features": [
+        "Unique cuisine",
+        "Good rating",
+        "Affordable price"
+      ]
+    }
+  ],
+  "22ac253a5e0b0b05724ec6e5cf7a5a351d52746b349ea746c6b86ec992a9839e": [
+    {
+      "restaurant_name": "Mavalli Tiffin Room (MTR)",
+      "rank": 1,
+      "cuisine": "South Indian",
+      "rating": 4.5,
+      "average_cost": 250.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant is highly rated with a 4.5-star rating and 2896 votes, indicating that it serves good food. It is also located in a convenient area and falls within the user's budget tier.",
+      "highlighted_features": [
+        "Highly rated",
+        "Good food",
+        "Convenient location"
+      ]
+    }
+  ],
+  "8049ecca7b7506275456e6eb5e23e1bc11089391fbdfcef6fad65fddac799274": [
+    {
+      "restaurant_name": "Mavalli Tiffin Room (MTR)",
+      "rank": 1,
+      "cuisine": "South Indian",
+      "rating": 4.5,
+      "average_cost": 250.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "Mavalli Tiffin Room (MTR) is a highly-rated South Indian restaurant with a 4.5-star rating and a medium budget tier. It's a great option for those looking for good food.",
+      "highlighted_features": [
+        "Highly-rated",
+        "South Indian cuisine",
+        "Medium budget"
+      ]
+    },
+    {
+      "restaurant_name": "SLV Corner Restaurant",
+      "rank": 2,
+      "cuisine": "South Indian, Chinese, North Indian, Street Food, Rolls, Juices",
+      "rating": 4.1,
+      "average_cost": 550.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "SLV Corner Restaurant offers a wide variety of cuisines and has a 4.1-star rating. While it's a bit pricier than MTR, it's still a great option for those looking for good food.",
+      "highlighted_features": [
+        "Wide variety of cuisines",
+        "4.1-star rating",
+        "Medium budget"
+      ]
+    },
+    {
+      "restaurant_name": "Kamat Bugle Rock",
+      "rank": 3,
+      "cuisine": "South Indian, Fast Food",
+      "rating": 3.9,
+      "average_cost": 300.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "Kamat Bugle Rock is a popular fast food joint with a 3.9-star rating and a medium budget tier. It's a good option for those looking for quick and affordable food.",
+      "highlighted_features": [
+        "Fast food",
+        "3.9-star rating",
+        "Medium budget"
+      ]
+    },
+    {
+      "restaurant_name": "Roti Ghar",
+      "rank": 4,
+      "cuisine": "North Indian, Chinese, South Indian",
+      "rating": 3.9,
+      "average_cost": 500.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "Roti Ghar is a North Indian restaurant with a 3.9-star rating and a medium budget tier. While it's a bit pricier than some of the other options, it's still a good choice for those looking for good food.",
+      "highlighted_features": [
+        "North Indian cuisine",
+        "3.9-star rating",
+        "Medium budget"
+      ]
+    }
+  ],
+  "faccc7e2b9a4aa76f854b0d077a1b7c853ae80cd8f095e12916dafab9f6d93c4": [
+    {
+      "restaurant_name": "Church Street Social",
+      "rank": 1,
+      "cuisine": "American, North Indian, Chinese, Finger Food, Momos",
+      "rating": 4.3,
+      "average_cost": 1500.0,
+      "location": "Church Street",
+      "estimated_cost_tier": "High",
+      "justification": "Church Street Social consistently receives high ratings and has a diverse menu, making it a great fit for users seeking good food.",
+      "highlighted_features": [
+        "Diverse menu",
+        "High ratings"
+      ]
+    },
+    {
+      "restaurant_name": "Chutney Chang",
+      "rank": 2,
+      "cuisine": "North Indian, Chinese, BBQ",
+      "rating": 4.2,
+      "average_cost": 1500.0,
+      "location": "Church Street",
+      "estimated_cost_tier": "High",
+      "justification": "Chutney Chang has a strong reputation for good food, although slightly lower ratings than Church Street Social.",
+      "highlighted_features": [
+        "Good food reputation",
+        "Variety of cuisines"
+      ]
+    }
+  ],
+  "45487d905b48e77f165fcc4035ccca7ebc6ef4b191c30fa042886fcc9c3f6fb4": [
+    {
+      "restaurant_name": "Empire Restaurant",
+      "rank": 1,
+      "cuisine": "North Indian, Mughlai, South Indian, Chinese",
+      "rating": 4.3,
+      "average_cost": 750.0,
+      "location": "Bannerghatta Road",
+      "estimated_cost_tier": "High",
+      "justification": "Empire Restaurant offers a diverse range of cuisines, including North Indian, Mughlai, South Indian, and Chinese, which should cater to various tastes. Its high rating of 4.3 and 3178 votes indicate a strong reputation among customers.",
+      "highlighted_features": [
+        "Diverse cuisines",
+        "High rating"
+      ]
+    },
+    {
+      "restaurant_name": "Deja Vu Resto Bar",
+      "rank": 2,
+      "cuisine": "North Indian, Italian",
+      "rating": 4.4,
+      "average_cost": 900.0,
+      "location": "Bannerghatta Road",
+      "estimated_cost_tier": "High",
+      "justification": "Deja Vu Resto Bar has a consistent high rating of 4.4 across multiple entries, indicating a strong reputation among customers. Its North Indian and Italian cuisines offer a unique blend of flavors.",
+      "highlighted_features": [
+        "Consistent high rating",
+        "Unique cuisine blend"
+      ]
+    }
+  ],
+  "fbc36071c8011a3378fbd4c2894d5ec9699ed4028e7a8c74b6acf94a5fabaeb7": [
+    {
+      "restaurant_name": "Onesta",
+      "rank": 1,
+      "cuisine": "Pizza, Cafe, Italian",
+      "rating": 4.6,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Onesta is a top-rated restaurant with a high rating of 4.6. It serves a variety of cuisines including pizza, cafe, and Italian, which aligns with the user's desire for good food. The average cost is also reasonable at 600.0.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Vinny's",
+      "rank": 2,
+      "cuisine": "Pizza, Italian, Continental, Desserts",
+      "rating": 4.2,
+      "average_cost": 800.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Vinny's is a well-rated restaurant with a rating of 4.2. It serves a variety of cuisines including pizza, Italian, continental, and desserts, which aligns with the user's desire for good food. However, the average cost is slightly higher at 800.0.",
+      "highlighted_features": [
+        "Variety of cuisines",
+        "Good rating"
+      ]
+    },
+    {
+      "restaurant_name": "Szechuan Dragon",
+      "rank": 3,
+      "cuisine": "Chinese, Thai, Momos",
+      "rating": 4.2,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Szechuan Dragon is a well-rated restaurant with a rating of 4.2. It serves Chinese, Thai, and momos cuisine, which may not align perfectly with the user's desire for good food, but it's still a good option.",
+      "highlighted_features": [
+        "Good rating",
+        "Reasonable cost"
+      ]
+    }
+  ],
+  "7d0c4e4912298d613af95dbdef07fe8117b8edeba1426326b499bc35cb1f456e": [
+    {
+      "restaurant_name": "Brahmin's Coffee Bar",
+      "rank": 1,
+      "cuisine": "South Indian",
+      "rating": 4.8,
+      "average_cost": 100.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Low",
+      "justification": "Brahmin's Coffee Bar is a highly-rated South Indian restaurant with a low budget tier, making it an excellent choice for those seeking good food at an affordable price.",
+      "highlighted_features": [
+        "Highly-rated",
+        "Affordable"
+      ]
+    },
+    {
+      "restaurant_name": "Mavalli Tiffin Room (MTR)",
+      "rank": 2,
+      "cuisine": "South Indian",
+      "rating": 4.5,
+      "average_cost": 250.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "Mavalli Tiffin Room (MTR) is a well-regarded South Indian restaurant with a medium budget tier, offering a great balance of quality and affordability.",
+      "highlighted_features": [
+        "Well-regarded",
+        "Balanced price"
+      ]
+    },
+    {
+      "restaurant_name": "Vidyarthi Bhavan",
+      "rank": 3,
+      "cuisine": "South Indian",
+      "rating": 4.4,
+      "average_cost": 150.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Low",
+      "justification": "Vidyarthi Bhavan is a popular South Indian restaurant with a low budget tier, offering good food at an affordable price.",
+      "highlighted_features": [
+        "Popular",
+        "Affordable"
+      ]
+    },
+    {
+      "restaurant_name": "Sri Guru Kottureshwara Davangere Benne Dosa",
+      "rank": 4,
+      "cuisine": "South Indian",
+      "rating": 4.1,
+      "average_cost": 150.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Low",
+      "justification": "Sri Guru Kottureshwara Davangere Benne Dosa is a South Indian restaurant with a low budget tier, offering good food at an affordable price.",
+      "highlighted_features": [
+        "Good food",
+        "Affordable"
+      ]
+    },
+    {
+      "restaurant_name": "Onesta",
+      "rank": 5,
+      "cuisine": "Pizza, Cafe, Italian",
+      "rating": 4.6,
+      "average_cost": 600.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "High",
+      "justification": "Onesta is a highly-rated restaurant with a high budget tier, offering a unique dining experience for those seeking good food at a premium price.",
+      "highlighted_features": [
+        "Unique experience",
+        "Premium price"
+      ]
+    },
+    {
+      "restaurant_name": "Kabab Magic",
+      "rank": 6,
+      "cuisine": "North Indian, Kebab, Chinese, Fast Food",
+      "rating": 4.1,
+      "average_cost": 400.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "Medium",
+      "justification": "Kabab Magic is a moderately-rated restaurant with a medium budget tier, offering a variety of cuisines at a reasonable price.",
+      "highlighted_features": [
+        "Variety of cuisines",
+        "Reasonable price"
+      ]
+    },
+    {
+      "restaurant_name": "The Rogue Elephant",
+      "rank": 7,
+      "cuisine": "Desserts, Asian, Beverages",
+      "rating": 4.3,
+      "average_cost": 1000.0,
+      "location": "Basavanagudi",
+      "estimated_cost_tier": "High",
+      "justification": "The Rogue Elephant is a highly-rated dessert and beverage restaurant with a high budget tier, offering a unique experience for those seeking good food at a premium price.",
+      "highlighted_features": [
+        "Unique experience",
+        "Premium price"
+      ]
+    }
+  ],
+  "8d0edaacb4d99f51af603c18d9840b9672744b021ee7a918fdcb965c0d079189": [
+    {
+      "restaurant_name": "Gustoes Beer House",
+      "rank": 1,
+      "cuisine": "Continental, Italian, Mexican, North Indian, Chinese, Steak",
+      "rating": 4.1,
+      "average_cost": 1200.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Gustoes Beer House offers a diverse range of cuisines, including Continental, Italian, Mexican, North Indian, Chinese, and Steak. With a high rating of 4.1 and a large number of votes, it is a popular choice among locals. The high average cost is justified by the variety of options available.",
+      "highlighted_features": [
+        "Diverse cuisines",
+        "High rating",
+        "Popular among locals"
+      ]
+    },
+    {
+      "restaurant_name": "Jalsa",
+      "rank": 2,
+      "cuisine": "North Indian, Mughlai, Chinese",
+      "rating": 4.1,
+      "average_cost": 800.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Jalsa offers a range of North Indian, Mughlai, and Chinese cuisines. With a high rating of 4.1 and a moderate average cost, it is a good option for those looking for a high-quality meal without breaking the bank.",
+      "highlighted_features": [
+        "High rating",
+        "Moderate cost",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "1947",
+      "rank": 3,
+      "cuisine": "North Indian, Chinese",
+      "rating": 4.0,
+      "average_cost": 850.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "1947 offers a range of North Indian and Chinese cuisines. With a high rating of 4.0 and a moderate average cost, it is a good option for those looking for a high-quality meal without breaking the bank.",
+      "highlighted_features": [
+        "High rating",
+        "Moderate cost",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Vinny's",
+      "rank": 4,
+      "cuisine": "Pizza, Italian, Continental, Desserts",
+      "rating": 4.2,
+      "average_cost": 800.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Vinny's offers a range of Pizza, Italian, Continental, and Desserts. With a high rating of 4.2 and a moderate average cost, it is a good option for those looking for a high-quality meal without breaking the bank.",
+      "highlighted_features": [
+        "High rating",
+        "Moderate cost",
+        "Variety of cuisines"
+      ]
+    }
+  ],
+  "331eb75af73646a6e552e1cdcf2929d0d3dbd972bcbd3b5262caceb0f728efe2": [
+    {
+      "restaurant_name": "Onesta",
+      "rank": 1,
+      "cuisine": "Pizza, Cafe, Italian",
+      "rating": 4.6,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Onesta is a top-rated restaurant with a high rating of 4.6. It offers a variety of cuisines including pizza, cafe, and Italian, which aligns with the user's desire for good food. The average cost is also reasonable at 600.0.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Vinny's",
+      "rank": 2,
+      "cuisine": "Pizza, Italian, Continental, Desserts",
+      "rating": 4.2,
+      "average_cost": 800.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Vinny's is a well-rated restaurant with a rating of 4.2. It offers a range of cuisines including pizza, Italian, continental, and desserts. However, the average cost is slightly higher at 800.0, which may not fit the user's budget.",
+      "highlighted_features": [
+        "Variety of cuisines",
+        "Good rating"
+      ]
+    },
+    {
+      "restaurant_name": "Szechuan Dragon",
+      "rank": 3,
+      "cuisine": "Chinese, Thai, Momos",
+      "rating": 4.2,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Szechuan Dragon is a well-rated restaurant with a rating of 4.2. It offers a unique blend of Chinese, Thai, and momos cuisines. However, the user may need to consider the variety of cuisines offered, as it may not align with their desire for good food.",
+      "highlighted_features": [
+        "Unique blend of cuisines",
+        "Good rating"
+      ]
+    }
+  ],
+  "3f5cd68e245928ab8dfbb4db28dcb99d3e892f68470bb055de799c0d316a04e5": [
+    {
+      "restaurant_name": "eat.fit",
+      "rank": 1,
+      "cuisine": "Healthy Food, North Indian, Biryani, Continental, Sandwich, Desserts",
+      "rating": 4.5,
+      "average_cost": 500.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant has a high rating and offers a variety of cuisines, including healthy food options. It is also located in Bellandur, making it a convenient choice.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines",
+        "Healthy food options"
+      ]
+    },
+    {
+      "restaurant_name": "eat.fit",
+      "rank": 2,
+      "cuisine": "Healthy Food, North Indian, Biryani, Continental, Sandwich, Desserts",
+      "rating": 4.4,
+      "average_cost": 500.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant has a high rating and offers a variety of cuisines, including healthy food options. It is also located in Bellandur, making it a convenient choice.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines",
+        "Healthy food options"
+      ]
+    },
+    {
+      "restaurant_name": "eat.fit",
+      "rank": 3,
+      "cuisine": "Healthy Food, North Indian, Biryani, Continental, Sandwich, Desserts",
+      "rating": 4.4,
+      "average_cost": 500.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant has a high rating and offers a variety of cuisines, including healthy food options. It is also located in Bellandur, making it a convenient choice.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines",
+        "Healthy food options"
+      ]
+    },
+    {
+      "restaurant_name": "eat.fit",
+      "rank": 4,
+      "cuisine": "Healthy Food, North Indian, Biryani, Continental, Sandwich, Desserts",
+      "rating": 4.4,
+      "average_cost": 500.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant has a high rating and offers a variety of cuisines, including healthy food options. It is also located in Bellandur, making it a convenient choice.",
+      "highlighted_features": [
+        "High rating",
+        "Variety of cuisines",
+        "Healthy food options"
+      ]
+    },
+    {
+      "restaurant_name": "Oz Pies",
+      "rank": 5,
+      "cuisine": "Australian, Continental",
+      "rating": 3.8,
+      "average_cost": 400.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant offers a unique Australian cuisine and is located in Bellandur. However, it has a lower rating compared to the top recommendations.",
+      "highlighted_features": [
+        "Unique cuisine",
+        "Convenient location"
+      ]
+    },
+    {
+      "restaurant_name": "@ The Bbq",
+      "rank": 6,
+      "cuisine": "BBQ, Continental, North Indian, Chinese, Beverages",
+      "rating": 3.8,
+      "average_cost": 700.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant offers a variety of cuisines, including BBQ and North Indian. However, it has a lower rating and higher average cost compared to the top recommendations.",
+      "highlighted_features": [
+        "Variety of cuisines",
+        "BBQ options"
+      ]
+    },
+    {
+      "restaurant_name": "Harvest Market",
+      "rank": 7,
+      "cuisine": "Continental, Pizza",
+      "rating": 3.7,
+      "average_cost": 500.0,
+      "location": "Bellandur",
+      "estimated_cost_tier": "Medium",
+      "justification": "This restaurant offers a variety of continental and pizza options. However, it has a lower rating and fewer cuisines compared to the top recommendations.",
+      "highlighted_features": [
+        "Variety of cuisines",
+        "Pizza options"
+      ]
+    }
+  ],
+  "ce010ad8bc715dd167db1b3b20768b487410502810de8a2b347b274fc5543bae": [
+    {
+      "restaurant_name": "Onesta",
+      "rank": 1,
+      "cuisine": "Pizza, Cafe, Italian",
+      "rating": 4.6,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Onesta is a highly-rated restaurant with a consistent rating of 4.6 across multiple entries. It offers a variety of cuisines including pizza, cafe, and Italian, making it a great fit for users looking for good food.",
+      "highlighted_features": [
+        "Highly-rated",
+        "Variety of cuisines"
+      ]
+    },
+    {
+      "restaurant_name": "Vinny's",
+      "rank": 2,
+      "cuisine": "Pizza, Italian, Continental, Desserts",
+      "rating": 4.2,
+      "average_cost": 800.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "High",
+      "justification": "Vinny's is a well-regarded restaurant with a rating of 4.2. While it's a bit pricier than Onesta, it offers a wide range of cuisines including pizza, Italian, and desserts.",
+      "highlighted_features": [
+        "Wide range of cuisines",
+        "Desserts"
+      ]
+    },
+    {
+      "restaurant_name": "Szechuan Dragon",
+      "rank": 3,
+      "cuisine": "Chinese, Thai, Momos",
+      "rating": 4.2,
+      "average_cost": 600.0,
+      "location": "Banashankari",
+      "estimated_cost_tier": "Medium",
+      "justification": "Szechuan Dragon offers a unique blend of Chinese, Thai, and momos cuisines, making it a great option for users looking for something different. Its rating of 4.2 is also a plus.",
+      "highlighted_features": [
+        "Unique blend of cuisines",
+        "Rating of 4.2"
+      ]
+    }
+  ]
+}
