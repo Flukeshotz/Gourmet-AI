@@ -3,7 +3,7 @@ import './index.css';
 import RecommendationCard from './components/RecommendationCard';
 import ComparisonModal from './components/ComparisonModal';
 
-const API_BASE = 'http://localhost:8001/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8001/api';
 
 function App() {
   const [theme, setTheme] = useState('dark');
