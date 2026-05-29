@@ -1,4 +1,4 @@
-# System Architecture: AI-Powered Restaurant Decision Support System
+de# System Architecture: AI-Powered Restaurant Decision Support System
 
 This document outlines the detailed system architecture, component design, data flow, schema representations, and integration patterns for the Zomato-inspired Production-Grade AI Decision Support System.
 

@@ -15,3 +15,7 @@ stitch_light_mode/
 
 # Environment Variables
 .env
+backend/data/hf_cache/
+backend/data/logs/
+backend/data/prompt_cache.json
+*.png
