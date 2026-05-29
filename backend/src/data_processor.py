@@ -122,11 +122,25 @@ def verify_ingestion():
     df = load_and_clean_data()
     df = apply_budget_tiers(df)
     
-    # Ensure columns exist
-    expected_cols = ['restaurant_name', 'location', 'cuisines', 'average_cost', 'rating', 'votes', 'budget_tier']
-    for col in expected_cols:
-        if col not in df.columns:
-            logging.warning(f"Missing expected column: {col}")
+    expected_cols = ['restaurant_name', 'location', 'location_clean', 'cuisines', 'average_cost', 'rating', 'votes', 'budget_tier']
+    
+    # Filter to only the columns we actually need to save massive amounts of RAM
+    existing_cols = [col for col in expected_cols if col in df.columns]
+    df = df[existing_cols]
+    
+    # Optimize data types for Memory
+    if 'budget_tier' in df.columns:
+        df['budget_tier'] = df['budget_tier'].astype('category')
+    if 'location_clean' in df.columns:
+        df['location_clean'] = df['location_clean'].astype('category')
+    if 'location' in df.columns:
+        df['location'] = df['location'].astype('category')
+    if 'rating' in df.columns:
+        df['rating'] = df['rating'].astype('float32')
+    if 'average_cost' in df.columns:
+        df['average_cost'] = df['average_cost'].astype('float32')
+    if 'votes' in df.columns:
+        df['votes'] = df['votes'].astype('int32')
             
     # Save to parquet cache
     cache_path = Config.CACHE_FILE
